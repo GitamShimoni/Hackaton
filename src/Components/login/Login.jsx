@@ -3,7 +3,7 @@ import React from 'react';
 const Login = () => {
   return (
     <div id="login-container">
-    <div id="login-inner">
+    <div id="login-inner-div">
       <h1 id='login-tittle'>Log in</h1>
       <form>
       <div className='username-login-container'> 
