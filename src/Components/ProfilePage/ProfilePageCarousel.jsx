@@ -1,7 +1,7 @@
 import  { useEffect, useRef } from 'react';
-import './PhotoCarousel.css';
+import './ProfilePageCarousel.css'
 
-const PhotoCarousel = () => {
+const ProfilePageCarousel = (loginname) => {
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -12,14 +12,7 @@ const PhotoCarousel = () => {
           container: containerRef.current,
           cloudName: "seaface",
           aspectRatio: "16:9",
-          mediaAssets: [{ tag: "public" }],
-          carouselStyle: 'indicators',
-          carouselLocation: 'bottom',
-          autoplay: {
-            enabled: true,
-            waitForInteraction: false,
-            delay: 5000, // Set the desired delay in milliseconds (e.g., 5000 = 5 seconds)
-          }
+          mediaAssets: [{ tag: `${loginname}` }],
         });
         
         gallery.render();
@@ -30,11 +23,10 @@ const PhotoCarousel = () => {
   }, []);
 
   return (
-    <div id='photocarousel-component-container'>
-      <h1 id='photocarousel-header'>These Are The Last People Who Cleaned OUR Earth!</h1>
+    <div id='profilephotocarousel-component-container'>
       <div id='photocarousel-div' ref={containerRef}></div>
     </div>
   );
 };
 
-export default PhotoCarousel;
+export default ProfilePageCarousel;

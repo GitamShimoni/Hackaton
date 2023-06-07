@@ -1,11 +1,12 @@
 // import { useState } from "react";
 import {  Routes, Route } from "react-router-dom";
-import PhotoCarousel from "./Components/homepage/PhotoCarousel/PhotoCarousel";
+import PhotoCarousel from "./Components/PhotoCarousel/PhotoCarousel";
 import Login from "./Components/login/Login";
 import Layout from "./Components/Layout/Layout";
 
 import "./App.css";
 import UploadWidget from './Components/UploadPage/UploadWidget'
+import ProfilePage from "./Components/ProfilePage/ProfilePage";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Route path="/" element={<PhotoCarousel />} />
       <Route path="/login" element={<Login />} />
       <Route path="/upload" element={<UploadWidget />} />
+      <Route path="/profile" element={<ProfilePage />} />
     </Routes>
     </>
   );
