@@ -13,6 +13,7 @@ const PhotoCarousel = () => {
           cloudName: "seaface",
           aspectRatio: "16:9",
           mediaAssets: [{ tag: "gallery-images" }],
+
           carouselStyle: 'indicators',
           carouselLocation: 'bottom',
           

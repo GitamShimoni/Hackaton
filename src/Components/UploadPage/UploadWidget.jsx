@@ -10,21 +10,26 @@ const UploadWidget = () => {
     const [startButton, setStartButton] = useState(false);
     const [doneButton, setDoneButton] = useState(false);
     const [areYouDone, setAreYouDone] = useState(false);
+
     let localphotos;
     if (localStorage.getItem("photos"))
      localphotos = localStorage.getItem("photos")
     let photoproperties;
+
     useEffect(() => {
         cloudinaryRef.current = window.cloudinary;
         widgetRef.current = cloudinaryRef.current.createUploadWidget({
             cloudName: "seaface",
             uploadPreset: "default_upload",
             sources: ['local', 'camera'],
+
             tags: ["gallery-images", loginname, publicPic]
+
         }, function(error, result){
             console.log(result);
             photoproperties=result;
         });
+
         // localStorage.setItem("pictures", JSON.stringify([...localphotos, photoproperties]))
     }, [publicPic])
 
@@ -34,6 +39,7 @@ const UploadWidget = () => {
         }
         else{
             setPublicPic("unpublic")
+
         }
     }
     function handleStartButton(){

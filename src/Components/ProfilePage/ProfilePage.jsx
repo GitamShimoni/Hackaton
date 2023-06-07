@@ -28,6 +28,7 @@ const ProfilePage = () => {
                     <div className='achievments-row-2'>
                         <div><img className='profile-achievment-img' src="src\pic\badge4.png" alt="" /></div>
                         <div><img className='profile-achievment-img' src="src\pic\badge5.png" alt="" /></div>
+
                     </div>
                 </div>
                 <hr className='profilepage-line'/>

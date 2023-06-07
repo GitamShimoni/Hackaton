@@ -2,6 +2,9 @@ import React from "react";
 import "./layout.css";
 import { Outlet, Link } from "react-router-dom";
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook ,faInstagram,faGithub} from "@fortawesome/free-brands-svg-icons";
+
 
 const Layout = () => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -23,7 +26,7 @@ const Layout = () => {
               className="dropdown-button"
               onClick={() => setShowDropdown(() => !showDropdown)}
             >
-              hahahha
+              Menu
             </button>
           </div>
         </div>
@@ -57,21 +60,21 @@ const Layout = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {/* <FontAwesomeIcon className="icon" icon={faFacebook} /> */}
+              <FontAwesomeIcon className="icon" icon={faFacebook} />
             </a>
             <a
               href="https://www.instagram.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              {/* <FontAwesomeIcon  className="icon" icon={faInstagram} /> */}
+              <FontAwesomeIcon  className="icon" icon={faInstagram} />
             </a>
             <a
               href="https://www.github.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              {/* <FontAwesomeIcon className="icon" icon={faGithub} /> */}
+              <FontAwesomeIcon className="icon" icon={faGithub} />
             </a>
           </div>
           <ul className="footer-links">

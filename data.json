@@ -13,6 +13,7 @@
         "imgprofile": "https://randomuser.me/api/portraits/men/40.jpg",
         "level": 12,
         "achievments": ["beginner cleaner", "regular cleaner", "advanced cleaner", "master cleaner", "world savior"]
+
       },
       {
         "id": 789012,
@@ -27,6 +28,7 @@
         "imgprofile": "https://randomuser.me/api/portraits/men/31.jpg",
         "level": 63,
         "achievments": ["beginner cleaner", "regular cleaner", "advanced cleaner", "master cleaner", "world savior"]
+
       },
       {
         "id": 345678,
@@ -55,6 +57,7 @@
         "imgprofile": "https://randomuser.me/api/portraits/men/20.jpg",
         "level": 45,
         "achievments": ["beginner cleaner", "regular cleaner", "advanced cleaner", "master cleaner", "world savior"]
+
       },
       {
         "id": 567890,
@@ -69,6 +72,7 @@
         "imgprofile": "https://randomuser.me/api/portraits/women/23.jpg",
         "level": 92,
         "achievments": ["beginner cleaner", "regular cleaner", "advanced cleaner", "master cleaner", "world savior"]
+
       },
       {
         "id": 234567,
@@ -87,6 +91,7 @@
       {
         "id": 890123,
         "firstname": "Olivia",
+
         "lastname": "Miller",
         "age": 27,
         "dateofbirth": "02/03/94",
@@ -97,10 +102,12 @@
         "imgprofile": "https://randomuser.me/api/portraits/women/22.jpg",
         "level": 74,
         "achievments": ["beginner cleaner", "regular cleaner", "advanced cleaner", "master cleaner", "world savior"]
+
       },
       {
         "id": 456789,
         "firstname": "James",
+
         "lastname": "Taylor",
         "age": 31,
         "dateofbirth": "25/08/90",
@@ -195,6 +202,7 @@
         "imgprofile": "https://randomuser.me/api/portraits/men/26.jpg",
         "level": 21,
         "achievments": ["beginner cleaner", "regular cleaner", "advanced cleaner", "master cleaner", "world savior"]
+
       }
     ]
   }

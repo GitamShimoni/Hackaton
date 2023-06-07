@@ -1,4 +1,6 @@
+// import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
+
 // import PhotoCarousel from "./Components/homepage/PhotoCarousel/PhotoCarousel";
 import UploadWidget from './Components/UploadPage/UploadWidget'
 import Login from "./Components/login/Login";
@@ -10,6 +12,7 @@ import ProfilePage from "./Components/ProfilePage/ProfilePage";
 import Register from "./Components/Register/Register";
 import OtherPeopleProfile from "./Components/ProfilePage/OtherPeopleProfile";
 import "./App.css";
+
 function App() {
   return (
     <>
@@ -23,6 +26,7 @@ function App() {
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/profile/:id" element={<OtherPeopleProfile />} />
           <Route path="/register" element={<Register />} />
+
         </Route>
       </Routes>
 
