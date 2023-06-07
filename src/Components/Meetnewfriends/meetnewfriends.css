@@ -1,0 +1,25 @@
+#Meetnewfriends-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+#meetnewfriends-people-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.meetuser-div{
+    display: flex;
+    flex-direction: column;
+    margin: 3vw;
+    align-items: center;
+}
+.meetuser-img{
+    border-radius: 100%;
+    width: 25vh;
+}
+.meetuser-header{
+    font-size: 5vh;
+}

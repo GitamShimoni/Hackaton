@@ -1,31 +1,39 @@
 import './UploadWidget.css'
 import {useState, useEffect, useRef} from 'react';
 const UploadWidget = () => {
-    const username = "gitam"
+    let loginname;
+    if (localStorage.getItem("login"))
+    loginname = localStorage.getItem("login")
     const cloudinaryRef = useRef();
     const widgetRef = useRef();
     const [publicPic, setPublicPic] = useState("unpublic");
     const [startButton, setStartButton] = useState(false);
     const [doneButton, setDoneButton] = useState(false);
     const [areYouDone, setAreYouDone] = useState(false);
+    let localphotos;
+    if (localStorage.getItem("photos"))
+     localphotos = localStorage.getItem("photos")
+    let photoproperties;
     useEffect(() => {
         cloudinaryRef.current = window.cloudinary;
         widgetRef.current = cloudinaryRef.current.createUploadWidget({
             cloudName: "seaface",
             uploadPreset: "default_upload",
             sources: ['local', 'camera'],
-            tags: ["gallery-images", username, publicPic]
+            tags: ["gallery-images", loginname, publicPic]
         }, function(error, result){
             console.log(result);
+            photoproperties=result;
         });
-    }, [])
+        // localStorage.setItem("pictures", JSON.stringify([...localphotos, photoproperties]))
+    }, [publicPic])
 
     function handlePublicClick(){
-        if (publicPic=="public"){
-            setPublicPic("unpublic")
+        if (publicPic=="unpublic"){
+            setPublicPic("gallery-images")
         }
         else{
-            setPublicPic("public")
+            setPublicPic("unpublic")
         }
     }
     function handleStartButton(){

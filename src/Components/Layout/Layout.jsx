@@ -32,13 +32,13 @@ const Layout = () => {
             <Link to={"/"}></Link>
             <div className="left-nav-mobile">
               <Link to="/" className="link-nav">
-                HomePage
+                Homepage
               </Link>
               <Link to="/about" className="link-nav">
                 About Us
               </Link>
               <Link to="/EventPage" className="link-nav">
-                Wdding Me
+                Profile
               </Link>
               <Link to="/contact" className="link-nav">
                 Contact Us

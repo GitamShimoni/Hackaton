@@ -3,6 +3,7 @@ import './ProfilePageCarousel.css'
 
 const ProfilePageCarousel = (loginname) => {
   const containerRef = useRef(null);
+  console.log(loginname.loginname);
 
   useEffect(() => {
     const loadCloudinaryCarousel = async () => {
@@ -12,15 +13,16 @@ const ProfilePageCarousel = (loginname) => {
           container: containerRef.current,
           cloudName: "seaface",
           aspectRatio: "16:9",
-          mediaAssets: [{ tag: `${loginname}` }],
+          mediaAssets: [{ tag: `${loginname.loginname}` }],
         });
         
         gallery.render();
       }
     };
-
+  
     loadCloudinaryCarousel();
-  }, []);
+  }, [loginname]);
+  
 
   return (
     <div id='profilephotocarousel-component-container'>
@@ -30,3 +32,4 @@ const ProfilePageCarousel = (loginname) => {
 };
 
 export default ProfilePageCarousel;
+
