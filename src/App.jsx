@@ -4,7 +4,7 @@ import PhotoCarousel from "./Components/PhotoCarousel/PhotoCarousel";
 import Login from "./Components/login/Login";
 import Layout from "./Components/Layout/Layout";
 import Aboutus from "./Components/about/Aboutus";
-
+import "@fortawesome/fontawesome-svg-core/styles.css";
 import "./App.css";
 import UploadWidget from "./Components/UploadPage/UploadWidget";
 import ProfilePage from "./Components/ProfilePage/ProfilePage";
