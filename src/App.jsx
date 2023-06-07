@@ -1,20 +1,20 @@
-import { useState } from "react";
-import { Router, Routes, Route } from "react-router-dom";
-import Homepage from "./Components/homepage/Homepage";
+// import { useState } from "react";
+import {  Routes, Route } from "react-router-dom";
+import PhotoCarousel from "./Components/homepage/PhotoCarousel/PhotoCarousel";
 import Login from "./Components/login/Login";
 import Layout from "./Components/Layout/Layout";
 
 import "./App.css";
+import UploadWidget from './Components/UploadPage/UploadWidget'
 
 function App() {
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Layout/>}>
-          <Route index element={<Homepage/>} />
-          <Route path="/login" element={<Login/>} />
-        </Route>
-      </Routes>
+    <Routes>
+      <Route path="/" element={<PhotoCarousel />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/upload" element={<UploadWidget />} />
+    </Routes>
     </>
   );
 }

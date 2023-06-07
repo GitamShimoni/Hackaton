@@ -1,6 +1,8 @@
 #login-container{
     margin: auto;
 }
-#login-inner{
+#login-inner-div{
+    width: 30vw;
     margin: 30vw;
+
 }

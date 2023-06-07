@@ -1,0 +1,9 @@
+#photocarousel-component-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#photocarousel-div{
+    width: 65vw;
+}
