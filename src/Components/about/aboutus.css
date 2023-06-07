@@ -1,0 +1,20 @@
+.background-image {
+    background-image: url("src\pic\bgAbout.png");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+  }
+  
+  .content {
+    color: white;
+    margin-top: 300px;
+    margin-left: 50px;
+  }
+  .content p {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  #background-aboutus-img{
+    width: 100%;
+  }
