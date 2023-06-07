@@ -1,0 +1,197 @@
+{
+    "users": [
+      {
+        "id": 123456,
+        "firstname": "Gitam",
+        "last-name": "Shimoni",
+        "age": 22,
+        "date of birth": "23/04/01",
+        "city": "Tel Aviv",
+        "username": "gitam",
+        "password": 123456,
+        "gender": "male",
+        "img-profile": "this is the URL for the profile pic"
+      },
+      {
+        "id": 789012,
+        "firstname": "John",
+        "last-name": "Doe",
+        "age": 30,
+        "date of birth": "10/12/91",
+        "city": "New York",
+        "username": "johndoe",
+        "password": 987654,
+        "gender": "male",
+        "img-profile": "URL for John's profile pic"
+      },
+      {
+        "id": 345678,
+        "firstname": "Jane",
+        "last-name": "Smith",
+        "age": 28,
+        "date of birth": "05/06/95",
+        "city": "Los Angeles",
+        "username": "janesmith",
+        "password": 246813,
+        "gender": "female",
+        "img-profile": "URL for Jane's profile pic"
+      },
+      {
+        "id": 901234,
+        "firstname": "David",
+        "last-name": "Johnson",
+        "age": 35,
+        "date of birth": "17/09/88",
+        "city": "Chicago",
+        "username": "davidjohnson",
+        "password": 135792,
+        "gender": "male",
+        "img-profile": "URL for David's profile pic"
+      },
+      {
+        "id": 567890,
+        "firstname": "Emily",
+        "last-name": "Brown",
+        "age": 25,
+        "date of birth": "29/11/96",
+        "city": "London",
+        "username": "emilybrown",
+        "password": 24681357,
+        "gender": "female",
+        "img-profile": "URL for Emily's profile pic"
+      },
+      {
+        "id": 234567,
+        "firstname": "Michael",
+        "last-name": "Davis",
+        "age": 32,
+        "date of birth": "12/07/89",
+        "city": "Sydney",
+        "username": "michaeldavis",
+        "password": 951753,
+        "gender": "male",
+        "img-profile": "URL for Michael's profile pic"
+      },
+      {
+        "id": 890123,
+        "firstname": "Olivia",
+        "last-name": "Wilson",
+        "age": 27,
+        "date of birth": "08/03/94",
+        "city": "Toronto",
+        "username": "oliviawilson",
+        "password": 357159,
+        "gender": "female",
+        "img-profile": "URL for Olivia's profile pic"
+      },
+      {
+        "id": 456789,
+        "firstname": "James",
+        "last-name": "Taylor",
+        "age": 29,
+        "date of birth": "14/02/92",
+        "city": "Melbourne",
+        "username": "jamestaylor",
+        "password": 159753,
+        "gender": "male",
+        "img-profile": "URL for James' profile pic"
+      },
+      {
+        "id": 156489,
+        "firstname": "Sophia",
+        "last-name": "Anderson",
+        "age": 26,
+        "date of birth": "19/10/97",
+        "city": "Paris",
+        "username": "sophiaanderson",
+        "password": 753159,
+        "gender": "female",
+        "img-profile": "URL for Sophia's profile pic"
+      },
+      {
+        "id": 678901,
+        "firstname": "Alexander",
+        "last-name": "Martinez",
+        "age": 31,
+        "date of birth": "27/03/90",
+        "city": "Madrid",
+        "username": "alexandermartinez",
+        "password": 357951,
+        "gender": "male",
+        "img-profile": "URL for Alexander's profile pic"
+      },
+      {
+        "id": 234567,
+        "firstname": "Isabella",
+        "last-name": "Garcia",
+        "age": 24,
+        "date of birth": "02/09/99",
+        "city": "Barcelona",
+        "username": "isabellagarcia",
+        "password": 951357,
+        "gender": "female",
+        "img-profile": "URL for Isabella's profile pic"
+      },
+      {
+        "id": 890123,
+        "firstname": "William",
+        "last-name": "Lee",
+        "age": 33,
+        "date of birth": "11/04/88",
+        "city": "Berlin",
+        "username": "williamlee",
+        "password": 753951,
+        "gender": "male",
+        "img-profile": "URL for William's profile pic"
+      },
+      {
+        "id": 456789,
+        "firstname": "Ava",
+        "last-name": "Harris",
+        "age": 29,
+        "date of birth": "24/07/92",
+        "city": "Rome",
+        "username": "avaharris",
+        "password": 159753,
+        "gender": "female",
+        "img-profile": "URL for Ava's profile pic"
+      },
+      {
+        "id": 684237,
+        "firstname": "Joseph",
+        "last-name": "Clark",
+        "age": 30,
+        "date of birth": "09/11/91",
+        "city": "Tokyo",
+        "username": "josephclark",
+        "password": 753159,
+        "gender": "male",
+        "img-profile": "URL for Joseph's profile pic"
+      },
+      {
+        "id": 678901,
+        "firstname": "Mia",
+        "last-name": "Lewis",
+        "age": 27,
+        "date of birth": "15/06/94",
+        "city": "Seoul",
+        "username": "mialewis",
+        "password": 357951,
+        "gender": "female",
+        "img-profile": "URL for Mia's profile pic"
+      },
+      {
+        "id": 234567,
+        "firstname": "Benjamin",
+        "last-name": "Young",
+        "age": 28,
+        "date of birth": "18/09/95",
+        "city": "Sydney",
+        "username": "benjaminyoung",
+        "password": 951357,
+        "gender": "male",
+        "img-profile": "URL for Benjamin's profile pic"
+      }
+    ]
+  }
+  
