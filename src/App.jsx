@@ -1,13 +1,12 @@
 import { Routes, Route } from "react-router-dom";
-// import PhotoCarousel from "./Components/homepage/PhotoCarousel/PhotoCarousel";
-// import UploadWidget from './Components/UploadPage/UploadWidget'
+import PhotoCarousel from "./Components/homepage/PhotoCarousel/PhotoCarousel";
+import UploadWidget from './Components/UploadPage/UploadWidget'
 import Login from "./Components/login/Login";
 import Layout from "./Components/Layout/Layout";
 import Aboutus from "./Components/about/Aboutus";
-
 import "./App.css";
-import Homepage from "./Components/homepage/Homepage";
-
+import UploadWidget from './Components/UploadPage/UploadWidget'
+import ProfilePage from "./Components/ProfilePage/ProfilePage";
 function App() {
   return (
     <>
@@ -20,6 +19,7 @@ function App() {
           <Route path="/about" element={<Aboutus />} />
         </Route>
       </Routes>
+
     </>
   );
 }
