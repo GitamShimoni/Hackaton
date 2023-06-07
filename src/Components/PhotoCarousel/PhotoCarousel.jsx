@@ -12,16 +12,13 @@ const PhotoCarousel = () => {
           container: containerRef.current,
           cloudName: "seaface",
           aspectRatio: "16:9",
-          mediaAssets: [{ tag: "public" }],
+          mediaAssets: [{ tag: "gallery-images" }],
+
           carouselStyle: 'indicators',
           carouselLocation: 'bottom',
-          autoplay: {
-            enabled: true,
-            waitForInteraction: false,
-            delay: 5000, // Set the desired delay in milliseconds (e.g., 5000 = 5 seconds)
-          }
+          
         });
-        
+        console.log(gallery);
         gallery.render();
       }
     };

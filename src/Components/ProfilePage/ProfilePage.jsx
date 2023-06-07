@@ -20,15 +20,15 @@ const ProfilePage = () => {
                 </div>
                 <div className="profile-achievments-div">
                     <h1>{`Achievments`}</h1>
-                    <div className='achievments-row-1'>first line of achievments
-                        <div>achievment1</div>
-                        <div>achievment1</div>
-                        <div>achievment1</div>
+                    <div className='achievments-row-1'>
+                        <div><img className='profile-achievment-img' src="src\pic\badge1.png" alt="" /></div>
+                        <div><img className='profile-achievment-img' src="src\pic\badge2.png" alt="" /></div>
+                        <div><img className='profile-achievment-img' src="src\pic\badge3.png" alt="" /></div>
                     </div>
-                    <div className='achievments-row-2'>second line of achievments
-                        <div>achievment1</div>
-                        <div>achievment1</div>
-                        <div>achievment1</div>
+                    <div className='achievments-row-2'>
+                        <div><img className='profile-achievment-img' src="src\pic\badge4.png" alt="" /></div>
+                        <div><img className='profile-achievment-img' src="src\pic\badge5.png" alt="" /></div>
+
                     </div>
                 </div>
                 <hr className='profilepage-line'/>
