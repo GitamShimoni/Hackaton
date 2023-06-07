@@ -12,7 +12,7 @@ function App() {
   return (
     <>
     <Routes>
-      <Route path="/" element={<PhotoCarousel />} />
+      <Route path="/" element={<Layout />} />
       <Route path="/login" element={<Login />} />
       <Route path="/upload" element={<UploadWidget />} />
       <Route path="/profile" element={<ProfilePage />} />
