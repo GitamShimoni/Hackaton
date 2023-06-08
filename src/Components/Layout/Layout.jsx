@@ -33,8 +33,8 @@ const Layout = () => {
           <div className="left-nav">
             <div className="button-icon" >  
               <div className="icon-lay" >
-              <Link> <FontAwesomeIcon  size="2x"  icon={faBroom}/> </Link>
-              <Link> <FontAwesomeIcon to={"/upload"} size="2x" icon={faRightFromBracket} /> </Link>
+              <Link to={"/upload"} > <FontAwesomeIcon  size="2x"  icon={faBroom}/> </Link>
+              <Link to={"/"} > <FontAwesomeIcon  size="2x" icon={faRightFromBracket} /> </Link>
               </div>              
               <button
               className="dropdown-button"
