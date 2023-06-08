@@ -100,6 +100,6 @@
     text-align: center;
     font-size: 4vw;
 }
-.animate__animated.animate__fadeInUpBig {
+.animate__animated.animate__fadeInUp {
     --animate-duration: 5s;
   }
