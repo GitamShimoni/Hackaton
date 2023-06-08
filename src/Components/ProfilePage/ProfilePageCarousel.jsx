@@ -14,7 +14,6 @@ const ProfilePageCarousel = (loginname) => {
           cloudName: "seaface",
           aspectRatio: "16:9",
           mediaAssets: [{ tag: `${loginname.loginname}` }],
-
         });
         
         gallery.render();

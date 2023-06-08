@@ -9,23 +9,27 @@ const OtherPeopleProfile = () => {
     const currentuser = userslist.find((obj) => obj.id == id);
     const badges = [];
     let level;
-    if (currentuser.level<20 && currentuser.level>0){
+    let currentlevel = [];
+    for (let i=0; i<currentuser.level/10; i++){
+        currentlevel[i]=i;
+    }
+    if (currentuser.level>0){
         level=currentuser.achievments[0];
         badges[0]=true;
     }
-    else if(currentuser.level>20){
+    if(currentuser.level>20){
         level=currentuser.achievments[1];
         badges[1]=true;
     }
-    else if(currentuser.level>40){
+    if(currentuser.level>40){
         level=currentuser.achievments[2];
         badges[2]=true;
     }
-    else if(currentuser.level>60){
+    if(currentuser.level>60){
         level=currentuser.achievments[3];
         badges[3]=true;
     }
-    else if(currentuser.level>80){
+    if(currentuser.level>80){
         level=currentuser.achievments[4];
         badges[4]=true;
     }
@@ -38,7 +42,18 @@ const OtherPeopleProfile = () => {
                         <img id='profle-pic' src={`${currentuser.imgprofile}`} alt="Avatar"/>
                     </div>
                     <h1>{`${currentuser.firstname} ${currentuser.lastname}`}</h1>
-                    <p className="description"></p>
+                    <div className='properties-paragraph-div'>
+                        <p className='user-properties-paragraph'>{`Age ${currentuser.age}, ${currentuser.gender} from ${currentuser.city}.`}</p>
+                        <div id='garbage-cans-div'>
+                            <div>
+                                {currentlevel.map((index) => {
+                                    return (
+                                        <img key={index} className='garbagecansicon' src="https://img.freepik.com/premium-vector/garbage-trash-can-bin-icon-eco-bio-concept-recycling_601298-2019.jpg?w=2000" alt="garbage-cans" />
+                                    )
+                                })}
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div className="profile-achievments-div">
                     <h1>{`Achievments`}</h1>

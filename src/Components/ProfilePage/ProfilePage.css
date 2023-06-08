@@ -76,5 +76,13 @@ section{
     width: 5vw;
     margin: 2vw;
     filter: grayscale(100%);
-
+  }
+  .properties-paragraph-div{
+    
+  }
+  .user-properties-paragraph{
+    font-size: 2vw;
+  }
+  .garbagecansicon{
+    width: 2vw;
   }
