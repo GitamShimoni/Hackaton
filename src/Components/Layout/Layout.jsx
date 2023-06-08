@@ -34,7 +34,7 @@ const Layout = () => {
             <div className="button-icon" >  
               <div className="icon-lay" >
               <Link to={"/upload"} > <FontAwesomeIcon  size="2x"  icon={faBroom}/> </Link>
-              <Link to={"/"} > <FontAwesomeIcon  size="2x" icon={faRightFromBracket} /> </Link>
+              <Link to={"/login"} > <FontAwesomeIcon  size="2x" icon={faRightFromBracket} /> </Link>
               </div>              
               <button
               className="dropdown-button"

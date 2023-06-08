@@ -10,6 +10,7 @@ import Loginpage from "./Components/login/Loginpage";
 import ProfilePage from "./Components/ProfilePage/ProfilePage";
 import Register from "./Components/Register/Register";
 import OtherPeopleProfile from "./Components/ProfilePage/OtherPeopleProfile";
+import AwardPage from "./Components/Award/AwardPage";
 import "./App.css";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/login" element={<Homepage />} />
           <Route path="/register" element={<Register />} />
           <Route path="/about" element={<Aboutus />} />
+          <Route path="/get20points" element={<AwardPage />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/profile/:id" element={<OtherPeopleProfile />} />
           

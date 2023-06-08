@@ -22,23 +22,22 @@ const ProfilePage = () => {
         currentlevel[i]=i;
     }
     if (currentuser.level>0){
-        level=currentuser.achievments[0];
+        
         badges[0]=true;
     }
     if(currentuser.level>20){
-        level=currentuser.achievments[1];
         badges[1]=true;
     }
     if(currentuser.level>40){
-        level=currentuser.achievments[2];
+      
         badges[2]=true;
     }
     if(currentuser.level>60){
-        level=currentuser.achievments[3];
+      
         badges[3]=true;
     }
     if(currentuser.level>80){
-        level=currentuser.achievments[4];
+      
         badges[4]=true;
     }
 
@@ -81,15 +80,6 @@ const ProfilePage = () => {
                                         <img key={index} className='garbagecansicon' src="https://img.freepik.com/premium-vector/garbage-trash-can-bin-icon-eco-bio-concept-recycling_601298-2019.jpg?w=2000" alt="garbage-cans" />
                                     )
                                 })}
-                        </div>
-                        <div id='garbage-cans-div'>
-                            <div>
-                                {currentlevel.map((index) => {
-                                    return (
-                                        <img key={index} className='garbagecansicon' src="https://img.freepik.com/premium-vector/garbage-trash-can-bin-icon-eco-bio-concept-recycling_601298-2019.jpg?w=2000" alt="garbage-cans" />
-                                    )
-                                })}
-                            </div>
                         </div>
                     </div>
                 </div>
