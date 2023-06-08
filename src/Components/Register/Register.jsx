@@ -1,86 +1,141 @@
-import './register.css'
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import './register.css';
+
 const Register = () => {
+  const { handleSubmit, register, formState: { errors } } = useForm();
+
+  const onSubmit = (data) => {
+    console.log(data);
+  };
+
   return (
-    <>
-        <div id="register-container">
-        <div id="register-inner-div">
-            <div>
-            <img id="Logo-img-register" src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F403403779%2F1236023771243%2F1%2Foriginal.20221201-213944?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C92%2C1151%2C1151&s=540d5ceecc29cde765e9a8efde1e0989" alt="Logo"/>
-        </div>
-            <h1 id='register-tittle'>Register</h1>
-          <form>
-                <div className="qwerty">
-                <div className="input-group">
-                    <input required="" type="number" name="number" autoComplete="off" className="input"/>
-                    <label className="user-label">Your Id</label>
-                </div>
-                <div className="input-group">
-                    <input required="" type="password" name="password" autoComplete="off" className="input"/>
-                    <label className="user-label">Password</label>
-                </div>
-                <div className="input-group">
-                    <input required="" type="text" name="text" autoComplete="off" className="input"/>
-                    <label className="user-label">Email</label>
-                </div>
-                <div className="coolinput">
-                    <label htmlFor="input" className="text">Date of Birth:</label>
-                    <input type="date" placeholder="Write here..." name="input" className="input"/>
-                </div>
-                <div className="input-group">
-                    <input required="" type="text" name="text" autoComplete="off" className="input"/>
-                    <label className="user-label">Bio</label>
-                </div>
+    <div className="register-container">
+      <div className="register-inner-div">
+        <h1 className="register-title">Register</h1>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <div className="column">
+            <div className="input-group">
+              <input
+                required
+                type="text"
+                autoComplete="off"
+                className="input"
+                placeholder="First Name"
+                {...register('firstName', { required: true })}
+              />
+              {errors.firstName && (
+                <span className="error-message">First Name is required</span>
+              )}
             </div>
-            <div>
-              <div className="input-group">
-                <input required="" type="text" name="text" autoComplete="off" className="input"/>
-                <label className="user-label">First Name</label>
+            <div className="input-group">
+              <input
+                required
+                type="text"
+                autoComplete="off"
+                className="input"
+                placeholder="Last Name"
+                {...register('lastName', { required: true })}
+              />
+              {errors.lastName && (
+                <span className="error-message">Last Name is required</span>
+              )}
+            </div>
+            <div className="input-group">
+              <input
+                required
+                type="text"
+                autoComplete="off"
+                className="input"
+                placeholder="User Name"
+                {...register('userName', { required: true })}
+              />
+              {errors.userName && (
+                <span className="error-message">User Name is required</span>
+              )}
+            </div>
+            <div className="input-group">
+              <input
+                required
+                type="text"
+                autoComplete="off"
+                className="input"
+                placeholder="Profile IMG Src"
+                {...register('profileImg', { required: true })}
+              />
+              {errors.profileImg && (
+                <span className="error-message">Profile IMG Src is required</span>
+              )}
+            </div>
+            <div className="input-group">
+              <label htmlFor="dobInput" className="text">
+                Date of Birth:
+              </label>
+              <input
+                type="date"
+                id="dobInput"
+                className="input"
+                {...register('dobInput', { required: true })}
+              />
+              {errors.dobInput && (
+                <span className="error-message">Date of Birth is required</span>
+              )}
+            </div>
+            <div className="input-group">
+              <textarea
+                required
+                autoComplete="off"
+                className="textarea"
+                placeholder="Bio"
+                {...register('bio', { required: true })}
+              ></textarea>
+              {errors.bio && (
+                <span className="error-message">Bio is required</span>
+              )}
+            </div>
+            <div className="input-group">
+              <div className="radio-button">
+                <input
+                  type="radio"
+                  id="maleRadio"
+                  name="gender"
+                  value="Male"
+                  {...register('gender', { required: true })}
+                />
+                <label htmlFor="maleRadio">Male</label>
               </div>
-              <div className="input-group">
-                <input required="" type="text" name="text" autoComplete="off" className="input"/>
-                <label className="user-label">Last Name</label>
+              <div className="radio-button">
+                <input
+                  type="radio"
+                  id="femaleRadio"
+                  name="gender"
+                  value="Female"
+                  {...register('gender', { required: true })}
+                />
+                <label htmlFor="femaleRadio">Female</label>
               </div>
-              <div className="input-group">
-                <input required="" type="text" name="text" autoComplete="off" className="input"/>
-                <label className="user-label">User Name</label>
+              <div className="radio-button">
+                <input
+                  type="radio"
+                  id="otherRadio"
+                  name="gender"
+                  value="Other"
+                  {...register('gender', { required: true })}
+                />
+                <label htmlFor="otherRadio">Other</label>
               </div>
-              <div className="input-group">
-                <input required="" type="text" name="text" autoComplete="off" className="input"/>
-                <label className="user-label">Profile IMG Src</label>
-              </div>
-              <div>
-              </div>
-            <div id="radio-sign-up">
-                <label className="radio-button">
-                    <input value="option1" name="example-radio" type="radio"/>
-                    <span className="radio"></span>
-                     Male
-                  </label>
-                  
-                  <label className="radio-button">
-                    <input value="option2" name="example-radio" type="radio"/>
-                    <span className="radio"></span>
-                    Female
-                  </label>
-
-                  <label className="radio-button">
-                    <input value="option2" name="example-radio" type="radio"/>
-                    <span className="radio"></span>
-                     Other 
-                  </label>
-        <div id="sign-up-button">
-            <button>
-                Sign Up
-              </button>
-         </div>
+              {errors.gender && (
+                <span className="error-message">Gender is required</span>
+              )}
+            </div>
           </div>
-        </div>
-        
-          </form>
+          <div>
+            <button type="submit" className="register-button">Sign Up</button>
           </div>
+        </form>
+      </div>
     </div>
-    </>
-  )
-}
+  );
+};
 
-export default Register
+export default Register;
