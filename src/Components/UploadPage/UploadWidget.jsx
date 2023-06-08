@@ -65,7 +65,7 @@ const UploadWidget = () => {
     emailjs
       .sendForm(
         "service_ibr8r2v",
-        "template_udbzlbj",
+        "template_4sp1ym2",
         form.current,
         "RcApGEp-Su9_KGK4V"
       )
