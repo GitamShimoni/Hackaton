@@ -12,8 +12,10 @@ const UploadWidget = () => {
     const [startButton, setStartButton] = useState(false);
     const [doneButton, setDoneButton] = useState(false);
     const [areYouDone, setAreYouDone] = useState(false);
+
     const [email, setEmail] = useState("");
     const [name, setName] = useState("");
+
 
     let localphotos;
     if (localStorage.getItem("photos"))
@@ -82,6 +84,7 @@ const UploadWidget = () => {
 
     return (
         <div id='UploadWidget-Container'>
+
             {!startButton && <div id='start-cleaning-div'  className={startButton && `hidden-startbutton`}>
                 <form ref={form} onSubmit={() => handleSubmit()}>
                     <div id='enter-email-div'>
@@ -90,6 +93,7 @@ const UploadWidget = () => {
                         <button type='submit'>Submit</button>
                     </div>
                 </form>
+
                 <button className='Uploadpage-buttons' onClick={()=> handleStartButton()}>Start Cleaning Now!</button>
             </div>}
             {doneButton && <div id='start-cleaning-div'>
@@ -97,16 +101,21 @@ const UploadWidget = () => {
             </div>}
             
             {areYouDone && <div id='readytoupload-div'>
-                <div>
-                    <label htmlFor="input">Do you want the picture to be public? </label>
+                <div className='readytoupload-div-inner' >
+                    <label className='public'  htmlFor="input">Do you want the picture to be public? </label>
                     <input type="checkbox" onClick={()=> handlePublicClick()}/>
                 </div>
                 <div id='upload-button-container'>
+                    <input type="email" className='Uploadpage-buttons'  name="email" id="" onChange={()=>handel} />
+                    <button className='Uploadpage-buttons' onClick={() => widgetRef.current.open()}>
+                        submite
+                    </button>
                     <button className='Uploadpage-buttons' onClick={() => widgetRef.current.open()}>
                         Upload
                     </button>
                 </div>
             </div>}
+           </div>
             
         </div>
     )
