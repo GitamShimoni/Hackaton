@@ -86,7 +86,9 @@ const UploadWidget = () => {
     return (
         <div id='UploadWidget-Container'>
 
-            {!startButton && <div id='start-cleaning-div'  className={startButton && `hidden-startbutton`}>
+           <img src="src\pic\SeaFace.png" className='image-1'  alt="" />
+           <div className='section-upload' >
+           {!startButton && <div id='start-cleaning-div'  className={startButton && `hidden-startbutton`}>
                 <form ref={form} onSubmit={(e) => handleSubmit(e)}>
                     <div id='enter-email-div'>
                         <label htmlFor="text">Enter Your Email</label>
@@ -115,6 +117,7 @@ const UploadWidget = () => {
                     </button>
                 </div>
             </div>}
+           </div>
            
             
         </div>
