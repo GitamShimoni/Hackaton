@@ -40,7 +40,7 @@ const Layout = () => {
               <Link to="/about" className="link-nav">
                 About Us
               </Link>
-              <Link to="/EventPage" className="link-nav">
+              <Link to="/profile" className="link-nav">
                 Profile
               </Link>
               <Link to="/contact" className="link-nav">
