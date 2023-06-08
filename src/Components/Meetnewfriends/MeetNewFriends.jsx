@@ -5,7 +5,6 @@ const MeetNewFriends = () => {
     const data = users.users;
     let shuffledArray = data.sort(() => Math.random() - 0.5);
     shuffledArray = shuffledArray.slice(0, 3);
-    console.log(shuffledArray);
     
   return (
     <div id="Meetnewfriends-container">
