@@ -9,40 +9,32 @@ function Loginpage() {
 
     let arrayofusers;
     if (localStorage.getItem("users")){
-      arrayofusers = localStorage.getItem("users");
+      arrayofusers = JSON.parse(localStorage.getItem("users"));
     }
     else{
       localStorage.setItem("users", JSON.stringify([]))
     }
     
     function checkUser(objofinput){
-    let admincheck = null
-    let check=false;
     let namesaved = null;
+    let check;
     for (let i=0; i<arrayofusers.length;i++){
-       if (arrayofusers[i].Username==objofinput.username&&arrayofusers[i].Password==objofinput.password){
+      console.log(arrayofusers[i]);
+      console.log(objofinput);
+       if (arrayofusers[i].userName==objofinput.username&&arrayofusers[i].password==objofinput.password){
+        console.log(true);
         check=true;
-        namesaved=arrayofusers[i].FullName;
-        admincheck = arrayofusers[i].Admin;
+        namesaved=arrayofusers[i].firstName;
        }
     }
 
     if (check==true){
-        if(admincheck==true){
-          //lead to admin page
-          
-          navigate('Manager');
-          localStorage.setItem("login", namesaved)
-        }else{
-          //lead to worker page
-         
-          navigate('Worker');
-          localStorage.setItem("login", namesaved)
-        }
-    }else{
+      localStorage.setItem("login", namesaved)
+      navigate('../');
+    }
+    else{
       alert("username / password is incorrect")
     }
-    
   }
 
     return(

@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  padding: 5vw;
 }
 
 .register-inner-div {
@@ -53,7 +53,8 @@
 .radio-button {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1vw;
+  margin: 2vw;
 }
 
 .register-button {

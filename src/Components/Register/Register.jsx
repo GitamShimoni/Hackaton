@@ -1,12 +1,24 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 import './register.css';
 
 const Register = () => {
+  const navigate = useNavigate();
   const { handleSubmit, register, formState: { errors } } = useForm();
+  let users;
+  if (localStorage.getItem("users")){
+   users  = JSON.parse(localStorage.getItem("users"));
+  }
+  else{
+    localStorage.setItem("users", JSON.stringify([]))
+  }
 
   const onSubmit = (data) => {
-    console.log(data);
+    data.achievements = [false, false, false, false, false];
+    data.level = 0;
+    localStorage.setItem("users", JSON.stringify([...users, data]));
+    navigate('/login');
   };
 
   return (
@@ -52,6 +64,19 @@ const Register = () => {
               />
               {errors.userName && (
                 <span className="error-message">User Name is required</span>
+              )}
+            </div>
+            <div className="input-group">
+              <input
+                required
+                type="password"
+                autoComplete="off"
+                className="input"
+                placeholder="Password"
+                {...register('password', { required: true })}
+              />
+              {errors.password && (
+                <span className="error-message">Password is required</span>
               )}
             </div>
             <div className="input-group">
@@ -114,18 +139,21 @@ const Register = () => {
                 />
                 <label htmlFor="femaleRadio">Female</label>
               </div>
-              <div className="radio-button">
-                <input
-                  type="radio"
-                  id="otherRadio"
-                  name="gender"
-                  value="Other"
-                  {...register('gender', { required: true })}
-                />
-                <label htmlFor="otherRadio">Other</label>
-              </div>
               {errors.gender && (
                 <span className="error-message">Gender is required</span>
+              )}
+            </div>
+            <div className="input-group">
+              <input
+                required
+                type="text"
+                autoComplete="off"
+                className="input"
+                placeholder="City"
+                {...register('city', { required: true })}
+              />
+              {errors.city && (
+                <span className="error-message">City is required</span>
               )}
             </div>
           </div>

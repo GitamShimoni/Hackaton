@@ -1,4 +1,5 @@
 import './UploadWidget.css'
+import emailjs from "emailjs-com";
 import {useState, useEffect, useRef} from 'react';
 const UploadWidget = () => {
     let loginname;
@@ -6,10 +7,13 @@ const UploadWidget = () => {
     loginname = localStorage.getItem("login")
     const cloudinaryRef = useRef();
     const widgetRef = useRef();
+    const form = useRef();
     const [publicPic, setPublicPic] = useState("unpublic");
     const [startButton, setStartButton] = useState(false);
     const [doneButton, setDoneButton] = useState(false);
     const [areYouDone, setAreYouDone] = useState(false);
+    const [email, setEmail] = useState("");
+    const [name, setName] = useState("");
 
     let localphotos;
     if (localStorage.getItem("photos"))
@@ -52,9 +56,40 @@ const UploadWidget = () => {
         
     }
     console.log(publicPic);
+
+    function handleSubmit(){
+        e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_ibr8r2v",
+        "template_udbzlbj",
+        form.current,
+        "RcApGEp-Su9_KGK4V"
+      )
+      .then((result) => {
+        console.log(result.text);
+        alert("Message has been sent.")
+        setName("");
+        setEmail("");
+
+      })
+      .catch((error) => {
+        console.log(error.text);
+        alert("Something went wrong.")
+      });
+    }
+
+
     return (
         <div id='UploadWidget-Container'>
             {!startButton && <div id='start-cleaning-div'  className={startButton && `hidden-startbutton`}>
+                <form ref={form} onSubmit={() => handleSubmit()}>
+                    <div id='enter-email-div'>
+                        <label htmlFor="text">Enter Your Email</label>
+                        <input value={email} type="text" onChange={(e) => setEmail(e.target.value)}/>
+                        <button type='submit'>Submit</button>
+                    </div>
+                </form>
                 <button className='Uploadpage-buttons' onClick={()=> handleStartButton()}>Start Cleaning Now!</button>
             </div>}
             {doneButton && <div id='start-cleaning-div'>

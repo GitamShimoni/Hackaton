@@ -3,7 +3,6 @@ import { Routes, Route } from "react-router-dom";
 
 // import PhotoCarousel from "./Components/homepage/PhotoCarousel/PhotoCarousel";
 import UploadWidget from './Components/UploadPage/UploadWidget'
-import Login from "./Components/login/Login";
 import Layout from "./Components/Layout/Layout";
 import Aboutus from "./Components/about/Aboutus";
 import Homepage from "./Components/homepage/Homepage"
@@ -26,6 +25,7 @@ function App() {
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/profile/:id" element={<OtherPeopleProfile />} />
           <Route path="/register" element={<Register />} />
+          
 
         </Route>
       </Routes>
