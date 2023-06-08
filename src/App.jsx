@@ -21,10 +21,10 @@ function App() {
           <Route path="/login" element={<Loginpage />} />
           <Route path="/upload" element={<UploadWidget />}/>
           <Route path="/login" element={<Homepage />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/about" element={<Aboutus />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/profile/:id" element={<OtherPeopleProfile />} />
-          <Route path="/register" element={<Register />} />
           
 
         </Route>
