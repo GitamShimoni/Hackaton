@@ -8,11 +8,13 @@ const ProfilePage = () => {
     }
     let users;
     if (localStorage.getItem("users")){
-        users = localStorage.getItem("users");
+        users = JSON.parse(localStorage.getItem("users"));
     }
-    const currentuser = users.map((obj) => {
-        return obj.username==loginname;
+    console.log(users, "this is the users");
+    const currentuser = users.find((obj) => {
+        return obj.userName==loginname;
     })
+    console.log(currentuser);
     const badges = [];
     let level;
     let currentlevel = [];
@@ -40,16 +42,46 @@ const ProfilePage = () => {
         badges[4]=true;
     }
 
+    function capitalizeFirstLetter(word) {
+        if (typeof word !== 'string') {
+          throw new Error('Input must be a string');
+        }
+      
+        if (word.length === 0) {
+          return word;
+        }
+      
+        const capitalized = word.charAt(0).toUpperCase() + word.slice(1);
+        return capitalized;
+      }
+      
+      function formatDate(dateString) {
+        const dateParts = dateString.split("-");
+        const year = dateParts[0];
+        const month = dateParts[1];
+        const day = dateParts[2];
+      
+        return `${day}-${month}-${year}`;
+      }
+      console.log(currentuser.city);
   return (
     <div>
             <div className="profile">
                 <div className="profile-header">
                     <div className="avatar">
-                        <img id='profle-pic' src={`${currentuser.imgprofile}`} alt="Avatar"/>
+                        <img id='profle-pic' src={`${currentuser.profileImg}`} alt="Avatar"/>
                     </div>
-                    <h1>{`${currentuser.firstname} ${currentuser.lastname}`}</h1>
+                    <h1>{`${capitalizeFirstLetter(currentuser.firstName)} ${capitalizeFirstLetter(currentuser.lastName)}`}</h1>
                     <div className='properties-paragraph-div'>
-                        <p className='user-properties-paragraph'>{`Age ${currentuser.age}, ${currentuser.gender} from ${currentuser.city}.`}</p>
+                        <p className='user-properties-paragraph'>{`Birthdate: ${formatDate(currentuser.dobInput)}   , ${currentuser.gender} from ${currentuser.city}.`}</p>
+                        <h1>{`Level: ${currentuser.level}`}</h1>
+                        <div>
+                             {currentlevel.map((index) => {
+                                    return (
+                                        <img key={index} className='garbagecansicon' src="https://img.freepik.com/premium-vector/garbage-trash-can-bin-icon-eco-bio-concept-recycling_601298-2019.jpg?w=2000" alt="garbage-cans" />
+                                    )
+                                })}
+                        </div>
                         <div id='garbage-cans-div'>
                             <div>
                                 {currentlevel.map((index) => {
@@ -75,7 +107,7 @@ const ProfilePage = () => {
                 </div>
                 <hr className='profilepage-line'/>
                 <div className="photos">
-                    <ProfilePageCarousel loginname={loginname}/>
+                    <ProfilePageCarousel loginname={currentuser.firstName}/>
                 </div>
             </div>
     </div>

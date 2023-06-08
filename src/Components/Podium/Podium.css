@@ -1,0 +1,105 @@
+#Podiumsection-container{
+    margin-top: 20vw;
+}
+#podiums-div{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 5vw;
+}
+.Podium1{
+    width: 20vw;
+    height: 32vw;
+    background: linear-gradient(191deg, rgba(247,230,115,1) 0%, rgba(221,205,21,1) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 6vw;
+}
+.Podium2{
+    width: 20vw;
+    height: 22vw;
+    background: linear-gradient(191deg, rgb(228, 241, 241) 0%, rgb(133, 133, 130) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 6vw;
+}
+.Podium3{
+    width: 20vw;
+    height: 15vw;
+    background: linear-gradient(191deg, rgb(114, 98, 7) 0%, rgb(170, 146, 5) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 6vw;
+}
+.podiumpicture{
+    width: 15vw;
+    height: 15vw;
+    border-radius: 100%;
+    object-fit: cover;
+    margin-bottom: 1vw;
+    padding: 2vw;
+}
+.podium1container{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    margin: 2vw;
+    transition: 1s;
+    cursor: pointer;
+    border-top-left-radius: 35%;
+    border-top-right-radius: 35%;
+    animation-duration: 2s;
+}
+.podium2container{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    margin: 2vw;
+    transition: 1s;
+    cursor: pointer;
+    border-top-left-radius: 35%;
+    border-top-right-radius: 35%;
+    animation-duration: 2s;
+}
+.podium3container{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    margin: 2vw;
+    transition: 1s;
+    cursor: pointer;
+    border-top-left-radius: 35%;
+    border-top-right-radius: 35%;
+}
+.podium1container:hover{
+    background: linear-gradient(191deg, rgba(247,230,115,1) 0%, rgba(221,205,21,1) 100%);
+}
+.podium2container:hover{
+    background: linear-gradient(191deg, rgb(228, 241, 241) 0%, rgb(133, 133, 130) 100%);
+}
+.podium3container:hover{
+    background: linear-gradient(191deg, rgb(114, 98, 7) 0%, rgb(170, 146, 5) 100%);
+}
+.podium-number-header{
+    font-size: 6vw;
+    margin-bottom: 3vw;
+}
+.podium-name-text{
+    font-size: 2vw;
+}
+#biggest-influencers-header{
+    text-align: center;
+    font-size: 4vw;
+}
+.animate__animated.animate__fadeInUpBig {
+    --animate-duration: 5s;
+  }
