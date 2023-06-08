@@ -19,7 +19,21 @@
 .meetuser-img{
     border-radius: 100%;
     width: 25vh;
+    transition: 1s;
+}
+.meetuser-img:hover{
+    transform: scale(1.1);
+    border: 1px solid black;
 }
 .meetuser-header{
     font-size: 5vh;
 }
+@media (max-width: 768px) {
+  
+    .meetuser-img{
+      width: 30vw;
+    }
+    .meetuser-header{
+        font-size: 4vw;
+    }
+  }

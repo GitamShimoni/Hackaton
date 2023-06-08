@@ -6,9 +6,7 @@ const Homepage = () => {
   return (
     <div className="homepage">
       <div className="homepage-hero">
-        {/* <img src="src/pic/new-image.jpg" alt="" className="hero-img" /> */}
-        <h2 className="hero-h2">Hello to Seaface</h2>
-        {/* <button className="hero-button">Fdfd</button> */}
+        <img id='background-seaface-img' src="src\pic\background.png" alt="" />
       </div>
       <MeetNewFriends></MeetNewFriends>
       <PhotoCarousel></PhotoCarousel>

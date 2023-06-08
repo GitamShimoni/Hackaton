@@ -1,25 +1,27 @@
 import React from "react";
 import "./layout.css";
 import { Outlet, Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook ,faInstagram,faGithub} from "@fortawesome/free-brands-svg-icons";
 
 
 const Layout = () => {
   const [showDropdown, setShowDropdown] = useState(false);
-
+  const [renderer, setRenderer] = useState(false);
+  useEffect(() => {
+    setShowDropdown(false);
+  }, [renderer])
   return (
     <>
       <div className="layout">
         <div className="nav-bar">
           <Link to={"/"}>
-            
               <img
                 className="img-nav-bar"
-                src="https://static.vecteezy.com/system/resources/previews/001/192/065/original/circle-logo-turbine-png.png"
+                src="https://i.ibb.co/QYrHfrj/wave-logo-no-background.png"
               />
-            
+            <div className="img-nav-div"></div>
           </Link>
           <div className="left-nav">
             <button
@@ -40,7 +42,7 @@ const Layout = () => {
               <Link to="/about" className="link-nav">
                 About Us
               </Link>
-              <Link to="/EventPage" className="link-nav">
+              <Link to="/profile" className="link-nav">
                 Profile
               </Link>
               <Link to="/contact" className="link-nav">
