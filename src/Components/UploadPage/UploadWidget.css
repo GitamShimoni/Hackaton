@@ -2,10 +2,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 15vw;
 }
 #upload-button-container{
     margin: 5vw;
+    position: absolute;
+    top: 0;
 }
 .Uploadpage-buttons{
     border-radius: 15px;
@@ -15,6 +16,9 @@
     cursor: pointer;
     transition: 1s;
     width: 27vw;
+}
+.start-cleaning-div{
+    /* position: absolute; */
 }
 .Uploadpage-buttons:hover{
     background: linear-gradient(191deg, rgb(213, 222, 203) 0%, rgb(190, 195, 190) 100%);
@@ -26,4 +30,21 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    position: absolute;
+}
+.upload-img{
+width: 100%;
+
+}
+.absolute-button{
+    position: absolute;
+    top: 90vh;
+    left: 35%;
+}
+.readytoupload-div-inner{
+    display: flex;
+}
+.public{
+    display: flex;
+    width: 30vw;
 }
