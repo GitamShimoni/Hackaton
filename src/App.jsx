@@ -19,10 +19,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Homepage />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Loginpage />} />
           <Route path="/upload" element={<UploadWidget />}/>
-          <Route path="/login" element={<Homepage />} />
-          <Route path="/register" element={<Register />} />
           <Route path="/about" element={<Aboutus />} />
           <Route path="/get20points" element={<AwardPage />} />
           <Route path="/profile" element={<ProfilePage />} />
