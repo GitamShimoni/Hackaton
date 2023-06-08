@@ -59,8 +59,9 @@ const UploadWidget = () => {
     }
     console.log(publicPic);
 
-    function handleSubmit(){
+    function handleSubmit(e){
         e.preventDefault();
+        console.log(form.current);
     emailjs
       .sendForm(
         "service_ibr8r2v",
@@ -86,10 +87,11 @@ const UploadWidget = () => {
         <div id='UploadWidget-Container'>
 
             {!startButton && <div id='start-cleaning-div'  className={startButton && `hidden-startbutton`}>
-                <form ref={form} onSubmit={() => handleSubmit()}>
+                <form ref={form} onSubmit={(e) => handleSubmit(e)}>
                     <div id='enter-email-div'>
                         <label htmlFor="text">Enter Your Email</label>
-                        <input value={email} type="text" onChange={(e) => setEmail(e.target.value)}/>
+                        <input type="text" style={{display: 'none'}} name='user_name' value={loginname}/>
+                        <input value={email} type="text" name='user_email' onChange={(e) => setEmail(e.target.value)}/>
                         <button type='submit'>Submit</button>
                     </div>
                 </form>
@@ -106,16 +108,14 @@ const UploadWidget = () => {
                     <input type="checkbox" onClick={()=> handlePublicClick()}/>
                 </div>
                 <div id='upload-button-container'>
-                    <input type="email" className='Uploadpage-buttons'  name="email" id="" onChange={()=>handel} />
-                    <button className='Uploadpage-buttons' onClick={() => widgetRef.current.open()}>
-                        submite
-                    </button>
+                    <div id='enter-email-container'>
+                    </div>
                     <button className='Uploadpage-buttons' onClick={() => widgetRef.current.open()}>
                         Upload
                     </button>
                 </div>
             </div>}
-           </div>
+           
             
         </div>
     )
