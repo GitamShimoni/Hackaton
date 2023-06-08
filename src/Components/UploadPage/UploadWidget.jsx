@@ -81,7 +81,10 @@ const UploadWidget = () => {
         alert("Something went wrong.")
       });
     }
-
+    // function handleUploadButton(){
+    //     widgetRef.current.open()
+        
+    // }
 
     return (
         <div id='UploadWidget-Container'>

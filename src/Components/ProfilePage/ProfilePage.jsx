@@ -21,22 +21,22 @@ const ProfilePage = () => {
     for (let i=0; i<currentuser.level/10; i++){
         currentlevel[i]=i;
     }
-    if (currentuser.level>0){
+    if (currentuser?.level>0){
         
         badges[0]=true;
     }
-    if(currentuser.level>20){
+    if(currentuser?.level>20){
         badges[1]=true;
     }
-    if(currentuser.level>40){
+    if(currentuser?.level>40){
       
         badges[2]=true;
     }
-    if(currentuser.level>60){
+    if(currentuser?.level>60){
       
         badges[3]=true;
     }
-    if(currentuser.level>80){
+    if(currentuser?.level>80){
       
         badges[4]=true;
     }

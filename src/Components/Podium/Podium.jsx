@@ -5,7 +5,7 @@ const Podium = () => {
     let userslist = users.users;
     let localUserList = JSON.parse(localStorage.getItem("users"));
     userslist = [...userslist, localUserList]
-    const sortedObjects = userslist.sort((a, b) => b.level - a.level);
+    const sortedObjects = userslist?.sort((a, b) => b?.level - a?.level);
     const topSorted = sortedObjects.slice(0, 3);
     console.log(topSorted[0]);
   return (
